@@ -1,0 +1,9 @@
+{
+	"name": "amarskdatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0a9e9f4d-d005-4747-83aa-776c868e85ae",
+		"tenantId": "f6168717-ecb3-45a3-b0e8-cd82814c338b"
+	}
+}

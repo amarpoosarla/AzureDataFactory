@@ -1,0 +1,50 @@
+{
+	"name": "s3_json_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "S3_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folderpath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "iotdataamar",
+				"folderPath": {
+					"value": "@dataset().folderpath",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"VehicleID": {
+					"type": "string"
+				},
+				"latitiude": {
+					"type": "number"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"City": {
+					"type": "string"
+				},
+				"temeprature": {
+					"type": "integer"
+				},
+				"speed": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
